@@ -18,16 +18,15 @@ variables:
 
 steps:
 - task: UseDotNet@2
-  displayName: "Use .NET Core SDK 3.1.300"
-  inputs: 
-  packageType: sdk
-  version: 3.1.300
+  displayName: 'Use .NET Core SDK 3.1.300'
+  inputs:
+    packageType: sdk
+    version: 3.1.300
 
-- task: Npm@2
-  displayName: "Rum npm install"
-  input: 
+- task: Npm@1
+  displayName: 'Run npm install'
+  inputs:
     verbose: false
-
 
 - task: NuGetToolInstaller@1
 
